@@ -10,6 +10,8 @@ function uploadFile() {
     const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0];
 
+    console.log(file);
+
     if (!file) {
         alert('Please select a file to upload.');
         return;
