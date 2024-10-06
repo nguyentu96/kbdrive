@@ -29,7 +29,7 @@ function uploadFile() {
         fetch(url, {
             method: 'PUT',
             headers: {
-                'Authorization': `token ${token}`,
+                'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
