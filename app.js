@@ -2,15 +2,13 @@
 const token = 'YOUR_PERSONAL_ACCESS_TOKEN'; // Replace with your GitHub PAT
 const owner = 'username'; // Your GitHub username or organization
 const repo = 'repo-name'; // Your repository name
-const path = 'path/in/repo/your-file.txt'; // Path where the file will be uploaded
+const path = 'drive'; // Path where the file will be uploaded
 const message = 'Upload file via GitHub API'; // Commit message
 
 // Function to handle file upload
 function uploadFile() {
     const fileInput = document.getElementById('fileInput');
     const file = fileInput.files[0];
-
-    console.log(file);
 
     if (!file) {
         alert('Please select a file to upload.');
@@ -22,8 +20,12 @@ function uploadFile() {
     reader.onloadend = function () {
         const base64Content = reader.result.split(',')[1]; // Extract base64 part
 
+        const filename = `${Date.now()}-${file.name}`;
+
+        console.log(filename);
+
         // Call the GitHub API to upload the file
-        const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+        const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}/${filename}`;
 
         fetch(url, {
             method: 'PUT',
