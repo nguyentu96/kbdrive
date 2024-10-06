@@ -1,7 +1,7 @@
 console.log("v2");
 
 // GitHub API Variables
-const token = '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'; // Replace with your GitHub PAT
+const token = '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'; // Replace with your GitHub PAT
 const owner = 'nguyentu96'; // Your GitHub username or organization
 const repo = 'kbdrive'; // Your repository name
 const path = 'uploaded-files'; // Path where the file will be uploaded
@@ -21,10 +21,7 @@ function uploadFile() {
     const reader = new FileReader();
     reader.onloadend = function () {
         const base64Content = reader.result.split(',')[1]; // Extract base64 part
-
         const filename = `${Date.now()}-${file.name}`;
-
-        console.log(filename);
 
         // Call the GitHub API to upload the file
         const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}/${filename}`;
