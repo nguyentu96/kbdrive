@@ -1,8 +1,8 @@
 // GitHub API Variables
-const token = 'YOUR_PERSONAL_ACCESS_TOKEN'; // Replace with your GitHub PAT
-const owner = 'username'; // Your GitHub username or organization
-const repo = 'repo-name'; // Your repository name
-const path = 'drive'; // Path where the file will be uploaded
+const token = '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'; // Replace with your GitHub PAT
+const owner = 'nguyentu96'; // Your GitHub username or organization
+const repo = 'kbdrive'; // Your repository name
+const path = 'uploaded-files'; // Path where the file will be uploaded
 const message = 'Upload file via GitHub API'; // Commit message
 
 // Function to handle file upload
