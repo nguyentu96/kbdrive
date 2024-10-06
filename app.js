@@ -1,7 +1,7 @@
-console.log("v2");
+console.log("v3");
 
 // GitHub API Variables
-const token = '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'; // Replace with your GitHub PAT
+const token = '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'; // Replace with your GitHub PAT
 const owner = 'nguyentu96'; // Your GitHub username or organization
 const repo = 'kbdrive'; // Your repository name
 const path = 'uploaded-files'; // Path where the file will be uploaded
@@ -29,7 +29,7 @@ function uploadFile() {
         fetch(url, {
             method: 'PUT',
             headers: {
-                'Authorization': `Bearer ${token}`,
+                'Authorization': `token ${token}`,
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
