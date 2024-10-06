@@ -1,7 +1,7 @@
 console.log("v4");
 
 // GitHub API Variables
-const token = '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'; // Replace with your GitHub PAT
+const token = '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'; // Replace with your GitHub PAT
 const owner = 'nguyentu96'; // Your GitHub username or organization
 const repo = 'kbdrive'; // Your repository name
 const path = 'uploaded-files'; // Path where the file will be uploaded
